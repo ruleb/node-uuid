@@ -1,6 +1,6 @@
 {
   "name": "uuid",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "RFC4122 (v1 and v4) generator",
   "keywords": [
     "uuid",
