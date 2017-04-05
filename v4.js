@@ -23,7 +23,7 @@ function v4(options, buf, offset) {
     }
   }
 
-  return buf || bytesToUuid(rnds);
+  return buf || bytesToUuid(rnds, null, options.dashes === false);
 }
 
 module.exports = v4;

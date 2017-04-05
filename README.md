@@ -57,6 +57,7 @@ Generate and return a RFC4122 v1 (timestamp-based) UUID.
   * `clockseq` - (Number between 0 - 0x3fff) RFC clock sequence.  Default: An internally maintained clockseq is used.
   * `msecs` - (Number | Date) Time in milliseconds since unix Epoch.  Default: The current time is used.
   * `nsecs` - (Number between 0-9999) additional time, in 100-nanosecond units. Ignored if `msecs` is unspecified. Default: internal uuid counter is used, as per 4.2.1.2.
+  * `dashes` - (Boolean) If generated id's should contain dashes. Default true.
 
 * `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.
 * `offset` - (Number) Starting index in `buffer` at which to begin writing.
@@ -95,6 +96,7 @@ Generate and return a RFC4122 v4 UUID.
 
   * `random` - (Number[16]) Array of 16 numbers (0-255) to use in place of randomly generated values
   * `rng` - (Function) Random # generator to use.  Set to one of the built-in generators - `uuid.mathRNG` (all platforms), `uuid.nodeRNG` (node.js only), `uuid.whatwgRNG` (WebKit only) - or a custom function that returns an array[16] of byte values.
+  * `dashes` - (Boolean) If generated id's should contain dashes. Default true.
 
 * `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.
 * `offset` - (Number) Starting index in `buffer` at which to begin writing.

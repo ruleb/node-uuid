@@ -94,3 +94,10 @@ test('ids spanning 1ms boundary are 100ns apart', function() {
   var dt = parseInt(after, 16) - parseInt(before, 16);
   assert(dt === 1, 'Ids spanning 1ms boundary are 100ns apart');
 });
+
+test('ids without dash should not contain dashes', function() {
+  var u1 = uuid.v1({ dashes: false });
+  assert(u1.indexOf('-') < 0, 'v1 doesnt contain dashes');
+  var u4 = uuid.v4({ dashes: false });
+  assert(u4.indexOf('-') < 0, 'v4 doesnt contain dashes');
+});

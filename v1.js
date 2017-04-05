@@ -97,7 +97,7 @@ function v1(options, buf, offset) {
     b[i + n] = node[n];
   }
 
-  return buf ? buf : bytesToUuid(b);
+  return buf ? buf : bytesToUuid(b, null, options.dashes === false);
 }
 
 module.exports = v1;
